@@ -1,8 +1,9 @@
-package com.sqlite
+package com.sqlite.ui
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.sqlite.R
 import com.sqlite.db.DataBase
 
 class MainActivity : AppCompatActivity() {
