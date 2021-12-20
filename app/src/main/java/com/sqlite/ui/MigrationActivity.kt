@@ -24,8 +24,8 @@ class MigrationActivity : AppCompatActivity() {
 
         dataBaseMigration = DataBaseMigration.getInstance(this)
 
-        dataBaseMigration.insertPersonData(3, "aliya", 28.0,9686025367)
-        dataBaseMigration.insertPersonData(4, "Ramesh", 29.0,8618378828)
+        dataBaseMigration.insertPersonData(5, "Sateesh", 28.0,9686025367)
+        dataBaseMigration.insertPersonData(6, "Suresh", 29.0,8618378828)
 
         dataBaseMigration.getPersonData().forEach {
             Log.i(TAG, it.toString())

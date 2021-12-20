@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import com.sqlite.model.NewPerson
+import com.sqlite.model.Person
 import com.sqlite.utils.Constants
 
 class DataBaseMigration(private val context: Context) :
@@ -19,10 +20,12 @@ class DataBaseMigration(private val context: Context) :
     ) {
 
     override fun onCreate(database: SQLiteDatabase?) {
+        Log.i("DataBaseMigration", "onCreate method is called")
         val CREATE_PERSON_TABLE = "CREATE TABLE " + Constants.PERSON_TABLE + " (" +
                 Constants.PERSON_ID + " INTEGER PRIMARY KEY," +
                 Constants.PERSON_NAME + " TEXT," +
-                Constants.PERSON_AGE + " TEXT)"
+                Constants.PERSON_AGE + " TEXT," +
+                Constants.PERSON_NUMBER + " INTEGER)"
 
         database?.execSQL(CREATE_PERSON_TABLE)
     }
