@@ -138,7 +138,8 @@ class DataBase(private val context: Context) :
         val database = writableDatabase
         //val updateQuery = "UPDATE ${Constants.PERSON_TABLE} SET ${Constants.PERSON_ID}='$id' WHERE id=1"
         //val updateQuery = "UPDATE ${Constants.PERSON_TABLE} SET ${Constants.PERSON_NAME}='$name' WHERE id=1"
-        val updateQuery = "UPDATE ${Constants.PERSON_TABLE} SET ${Constants.PERSON_AGE}='$age' WHERE id=1"
+        val updateQuery =
+            "UPDATE ${Constants.PERSON_TABLE} SET ${Constants.PERSON_AGE}='$age' WHERE id=1"
         database.execSQL(updateQuery)
 
     }
